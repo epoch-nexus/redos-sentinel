@@ -1,0 +1,29 @@
+[
+  {
+    "id": "nested-quantifier",
+    "name": "Nested Repetition (Exponential)",
+    "pattern": "^(a+)+$",
+    "test_string": "aaaaaaaaaaaaaaaaaaaa!",
+    "risk_level": "high",
+    "rule": "nested_quantifier",
+    "description": "Inner repetition '+' inside outer repetition '+' causes 2^N branch possibilities on non-matching suffix."
+  },
+  {
+    "id": "overlapping-alternation",
+    "name": "Overlapping Alternation (Exponential)",
+    "pattern": "^(a|aa)+$",
+    "test_string": "aaaaaaaaaaaaaaaaaaaa!",
+    "risk_level": "high",
+    "rule": "overlapping_alternation",
+    "description": "Branches 'a' and 'aa' overlap under repetition, creating ambiguity and combinatorial path explosion."
+  },
+  {
+    "id": "nested-star",
+    "name": "Nested Kleene Star",
+    "pattern": "(a*)*",
+    "test_string": "aaaaaaaaaaaaaaaaaaaa!",
+    "risk_level": "high",
+    "rule": "nested_quantifier",
+    "description": "Unbounded star repetition within outer star allows combinatorial epsilon and character partitions."
+  }
+]

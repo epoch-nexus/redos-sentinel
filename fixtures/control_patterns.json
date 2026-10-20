@@ -1,0 +1,26 @@
+[
+  {
+    "id": "email-rfc5322",
+    "name": "Standard Email Address",
+    "pattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+    "test_string": "security-team@example.com",
+    "risk_level": "low",
+    "description": "Deterministic character classes separated by fixed '@' and '.' delimiters; no nested repetitions."
+  },
+  {
+    "id": "iso-date",
+    "name": "ISO 8601 Date",
+    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+    "test_string": "2026-10-20",
+    "risk_level": "low",
+    "description": "Strictly bounded quantifiers separated by hyphens with deterministic linear matching."
+  },
+  {
+    "id": "disjoint-alternation",
+    "name": "Disjoint Enum Alternation",
+    "pattern": "^(apple|banana|cherry)$",
+    "test_string": "banana",
+    "risk_level": "low",
+    "description": "Disjoint string prefixes with no outer repetition operator."
+  }
+]
