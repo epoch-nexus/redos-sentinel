@@ -53,6 +53,7 @@ def _is_repetition_quantifier(quant: str) -> bool:
     if quant.startswith("{"):
         digits = re.findall(r"\d+", quant)
         if digits:
+            # {n,} or {n,m} where m > 1 or {n} where n > 1
             if "," in quant:
                 return True
             if int(digits[0]) > 1:
