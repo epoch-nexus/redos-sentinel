@@ -34,7 +34,7 @@ export const Landing: React.FC<LandingProps> = ({ onLaunchDashboard }) => {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full bg-black text-white overflow-hidden selection:bg-white/20 selection:text-white font-sans">
+    <div className="relative min-h-screen w-full bg-black text-white overflow-hidden selection:bg-brand-orange selection:text-white font-sans">
       {/* =========================================================================
           1. FULLSCREEN HTML5 BACKGROUND VIDEO (Guaranteed visible at z-0)
           ========================================================================= */}

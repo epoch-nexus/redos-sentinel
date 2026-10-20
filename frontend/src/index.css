@@ -21,6 +21,17 @@ body {
   min-height: 100vh;
 }
 
+/* Global High-Contrast Text Highlight Selection */
+::selection {
+  background-color: #FED7AA; /* Soft warm orange highlight */
+  color: #111827; /* Dark text - 100% readable */
+}
+
+::-moz-selection {
+  background-color: #FED7AA;
+  color: #111827;
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
