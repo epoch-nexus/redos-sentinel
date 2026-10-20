@@ -1,4 +1,4 @@
-# ReDoS Sentinel 🛡️⚡
+# ReDoS Sentinel
 
 > **Defend Against Regular Expression Denial of Service.**  
 > Real-time static heuristics, Python AST extraction, and process-isolated runtime benchmarking to detect and demonstrate catastrophic backtracking vulnerabilities before they crash production systems.
@@ -11,7 +11,7 @@
 
 ---
 
-## 🏗️ Architecture & Project Structure
+## Architecture and Project Structure
 
 ```text
 redos-sentinel/
@@ -57,7 +57,7 @@ redos-sentinel/
 
 ---
 
-## ⚡ Core Capabilities
+## Core Capabilities
 
 1. **Deterministic Static Heuristics (Linear $\mathcal{O}(N)$)**:
    - Identifies nested repetition structures: `(a+)+`, `(a*)*`, `([b-d]+)*`
@@ -80,7 +80,7 @@ redos-sentinel/
 
 ---
 
-## 🚀 Quickstart Guide
+## Quickstart Guide
 
 ### Prerequisites
 - Python 3.10+ (tested with Python 3.14)
@@ -127,7 +127,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## 🧪 Running the Automated Test Suite
+## Running the Automated Test Suite
 
 ### Backend Pytest Suite
 From the repository root:
@@ -145,7 +145,7 @@ npm run build
 
 ---
 
-## 📡 API Contract Reference
+## API Contract Reference
 
 ### `POST /analyze`
 **Request Payload:**
@@ -198,5 +198,5 @@ npm run build
 
 ---
 
-## 🛡️ License
+## License
 MIT License. Built for security engineers, DevOps professionals, and backend developers.
