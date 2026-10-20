@@ -11,7 +11,7 @@ import {
   CartesianGrid,
   Dot,
 } from 'recharts';
-import { SlidersHorizontal, Clock, AlertCircle, CheckCircle2, ShieldAlert } from 'lucide-react';
+import { Clock, AlertCircle, CheckCircle2, ShieldAlert } from 'lucide-react';
 
 interface BenchmarkHistoryCardProps {
   benchmark: BenchmarkResult[];
@@ -68,7 +68,7 @@ export const BenchmarkHistoryCard: React.FC<BenchmarkHistoryCardProps> = ({
 
         <div className="flex items-center space-x-2">
           {hasRun && (
-            <div className="flex items-center space-x-2 mr-2">
+            <div className="flex items-center space-x-2">
               {hasTimeouts ? (
                 <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-50 text-red-700 border border-red-200 flex items-center gap-1.5">
                   <AlertCircle className="w-3.5 h-3.5" />
@@ -82,13 +82,6 @@ export const BenchmarkHistoryCard: React.FC<BenchmarkHistoryCardProps> = ({
               )}
             </div>
           )}
-
-          <button
-            className="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-textMuted hover:text-textDark shadow-sm"
-            title="Filter History"
-          >
-            <SlidersHorizontal className="w-3.5 h-3.5" />
-          </button>
         </div>
       </div>
 

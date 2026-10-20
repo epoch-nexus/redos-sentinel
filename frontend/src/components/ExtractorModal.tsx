@@ -42,8 +42,9 @@ export const ExtractorModal: React.FC<ExtractorModalProps> = ({
       if (patterns.length === 0) {
         setError('No regex literals found in re.compile, re.search, re.match, or re.fullmatch calls.');
       }
-    } catch (err: any) {
-      setError(err.message || 'Extraction failed');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Extraction failed';
+      setError(message);
     } finally {
       setIsLoading(false);
     }

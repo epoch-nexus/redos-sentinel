@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Shield, Zap, Sparkles, Terminal, LogOut } from 'lucide-react';
+import { Shield, Zap, Terminal, LogOut } from 'lucide-react';
 
 interface SidebarProps {
   onOpenExtractor: () => void;
@@ -23,8 +23,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenExtractor, onNavigateHom
         {/* Capsule Navigation Icons */}
         <nav className="flex flex-col items-center space-y-3">
           <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="w-10 h-10 rounded-full bg-gray-50 hover:bg-gray-100 flex items-center justify-center text-textMuted hover:text-textDark transition-colors"
-            title="Overview"
+            title="Overview (Scroll to Top)"
           >
             <Zap className="w-4 h-4 text-brand-orange" />
           </button>
@@ -34,18 +35,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenExtractor, onNavigateHom
             title="Python AST Scanner"
           >
             <Terminal className="w-4 h-4" />
-          </button>
-          <button
-            className="w-10 h-10 rounded-full bg-gray-50 hover:bg-gray-100 flex items-center justify-center text-textMuted hover:text-textDark transition-colors"
-            title="Search Patterns"
-          >
-            <Search className="w-4 h-4" />
-          </button>
-          <button
-            className="w-10 h-10 rounded-full bg-gray-50 hover:bg-gray-100 flex items-center justify-center text-textMuted hover:text-textDark transition-colors"
-            title="Bookmarks"
-          >
-            <Sparkles className="w-4 h-4" />
           </button>
         </nav>
       </div>

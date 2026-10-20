@@ -94,38 +94,46 @@ export const Landing: React.FC<LandingProps> = ({ onLaunchDashboard }) => {
               </span>
             </div>
 
-            {/* Center Navigation Links */}
+            {/* Center Navigation Links (All fully functional) */}
             <div className="hidden md:flex items-center space-x-6 text-xs font-medium text-zinc-400">
-              <a
-                href="#overview"
-                className="hover:text-white transition-colors duration-150"
+              <button
+                onClick={onLaunchDashboard}
+                className="hover:text-white transition-colors duration-150 cursor-pointer"
               >
                 Overview
-              </a>
-              <a
-                href="#features"
-                className="hover:text-white transition-colors duration-150"
+              </button>
+              <button
+                onClick={onLaunchDashboard}
+                className="hover:text-white transition-colors duration-150 cursor-pointer"
               >
                 Features
-              </a>
-              <a
-                href="#engine"
-                className="hover:text-white transition-colors duration-150"
+              </button>
+              <button
+                onClick={onLaunchDashboard}
+                className="hover:text-white transition-colors duration-150 cursor-pointer"
               >
                 Engine
-              </a>
+              </button>
               <a
-                href="#docs"
-                className="hover:text-white transition-colors duration-150"
+                href="http://localhost:8000/docs"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white transition-colors duration-150 cursor-pointer"
               >
                 API Docs
               </a>
 
-              {/* Security Pill Badge */}
-              <span className="px-2.5 py-1 rounded-full bg-white/10 text-white text-[11px] font-semibold border border-white/15 flex items-center gap-1">
+              {/* Security Pill Badge linking to CWE-1333 */}
+              <a
+                href="https://cwe.mitre.org/data/definitions/1333.html"
+                target="_blank"
+                rel="noreferrer"
+                className="px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white text-[11px] font-semibold border border-white/15 flex items-center gap-1 transition-colors cursor-pointer"
+                title="View CWE-1333 (ReDoS Specification)"
+              >
                 <span>Security</span>
                 <ArrowUpRight className="w-3 h-3 text-zinc-300" />
-              </span>
+              </a>
             </div>
 
             {/* Right Action: Open Scanner CTA Button */}

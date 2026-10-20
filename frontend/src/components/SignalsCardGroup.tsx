@@ -6,10 +6,8 @@ import {
   ShieldCheck,
   Layers,
   Cpu,
-  ArrowUpRight,
   TrendingDown,
   TrendingUp,
-  SlidersHorizontal,
 } from 'lucide-react';
 
 interface SignalsCardGroupProps {
@@ -34,19 +32,9 @@ export const SignalsCardGroup: React.FC<SignalsCardGroupProps> = ({
             <p className="text-xs text-textMuted mt-0.5">Track your regex risk & structural heuristics.</p>
           </div>
 
-          <div className="flex items-center space-x-2">
-            <button
-              className="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-textMuted hover:text-textDark shadow-sm"
-              title="Filters"
-            >
-              <SlidersHorizontal className="w-3.5 h-3.5" />
-            </button>
-            <button
-              className="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-textMuted hover:text-textDark shadow-sm"
-              title="Expand Details"
-            >
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </button>
+          <div className="flex items-center space-x-1.5 px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-xs font-medium text-textMuted">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            <span className="font-mono text-[11px]">Static Scanner</span>
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Search, Calendar, Bell, ShieldCheck, Terminal } from 'lucide-react';
+import { Shield, Search, Calendar, Code, ShieldCheck, Terminal } from 'lucide-react';
 
 interface HeaderProps {
   onOpenExtractor: () => void;
@@ -69,14 +69,17 @@ export const Header: React.FC<HeaderProps> = ({
           <span className="hidden sm:inline">AST Scanner</span>
         </button>
 
-        {/* Notifications */}
-        <button
-          className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-textMuted hover:text-textDark shadow-soft transition-colors relative"
-          title="Notifications"
+        {/* API Docs Button */}
+        <a
+          href="http://localhost:8000/docs"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-gray-50 border border-gray-200 text-xs font-semibold text-textDark shadow-soft transition-colors"
+          title="Open Swagger API Docs"
         >
-          <Bell className="w-4 h-4" />
-          <span className="w-2 h-2 rounded-full bg-brand-orange absolute top-2 right-2" />
-        </button>
+          <Code className="w-3.5 h-3.5 text-brand-orange" />
+          <span className="hidden sm:inline">Docs</span>
+        </a>
 
         {/* Backend Status Avatar Chip */}
         <div
